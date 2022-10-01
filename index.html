@@ -1,43 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Expenses chart component</title>
 
-  My balance
-  $921.48
+    <link rel="stylesheet" href="./assets/scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  Spending - Last 7 days
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="balance">
+        <h2 class="balance__title">My balance</br>
+          <span class="balance__title__income">$921.48</span>
+        </h2>
+        <div class="balance__logo"></div>
+      </header>
+      <section class="expenses">
+        <h3 class="expenses__title">Spending - Last 7 days</h3>
+        <div class="expenses__daily">
+          <div class="vertical-wrapper">
+            <div class="bar">
+              <div class="progress-bar-monday"></div>
+            </div>
+            <div class="monday">
+              <p class="day">mon</p>
+            </div>
+          </div>
+          
+          <div class="vertical-wrapper">
+            <div class="bar">
+              <div class="progress-bar-tuesday"></div>
+            </div>
+            <div class="thuesday">
+              <p class="day">tue</p>
+            </div>
+          </div>
+          
+          <div class="vertical-wrapper">
+            <div class="bar">
+              <div class="progress-bar-wednesday"></div>
+            </div>
+            <div class="wednesday">
+              <p class="day">wed</p>
+            </div>
+          </div>
+            
+            <div class="vertical-wrapper">
+              <div class="bar">
+                <div class="progress-bar-thursday"></div>
+              </div>
+              <div class="thursday">
+                <p class="day">thu</p>
+              </div>
+            </div>
+              
+              <div class="vertical-wrapper">
+                <div class="bar">
+                  <div class="progress-bar-friday"></div>
+                </div>
+                <div class="friday">
+                  <p class="day">fri</p>
+                </div>
+              </div>
+                
+                <div class="vertical-wrapper">
+                  <div class="bar">
+                    <div class="progress-bar-saturday"></div>
+                  </div>
+                  <div class="saturday">
+                    <p class="day">sat</p>
+                  </div>
+                </div>
+                  
+                  <div class="vertical-wrapper">
+                    <div class="bar">
+                      <div class="progress-bar-sunday"></div>
+                    </div>
+                    <div class="sunday">
+                      <p class="day">sun</p>
+                    </div>
+                  </div>
+                </div>
+        <div class="expenses__resume resume">
+          <div class="resume__total">
+            <p class="total-text">Total this month </p>
+            <p class="total-value">$478.33</p>     
+          </div>
+          <div class="resume__increase">         
+            <p class="increase-value">+2.4%</p>     
+            <p class="increase-text">
+                from last month</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

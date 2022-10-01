@@ -1,0 +1,156 @@
+.container  {
+    width: 95%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+.balance  {
+    background-color: $soft-red;
+    border-radius: 12px;
+    padding: 15px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+    &__title  {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 0.8rem;
+        font-weight: 400;
+
+        &__income  {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+    }
+
+    &__logo  {
+        background: url('/assets/images/logo.svg') center/contain no-repeat;
+        height: 61px;
+        width: 61px;
+    }
+
+}
+.expenses  {
+    background-color: $very-pale-orange;
+    border-radius: 12px;
+    width: 100%;
+    padding: 25px 30px;
+
+    &__title  {
+        color: $dark-brown;
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+    
+    &__daily  {
+        border-bottom: 1px solid 
+        $cream ;
+        margin: 10px 0;
+        padding-bottom: 25px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        width: 100%;
+        column-gap: 10px;
+    }
+}
+.vertical-wrapper  {
+
+    .bar  {
+        height: 150px;   
+        border-radius: 6px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;   
+    }
+}
+.day  {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: $medium-brown;
+    font-weight: $regular;
+    text-align: center;
+}
+.progress-bar-monday  {
+    height: 70%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-tuesday  {
+    height: 20%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-wednesday  {
+    height: 10%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-thursday  {
+    height: 50%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-friday  {
+    height: 90%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-saturday  {
+    height: 22%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.progress-bar-sunday  {
+    height: 61%;
+    background-color: $soft-red;
+    border-radius: 3px;   
+}
+.resume  {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+
+    &__total  {
+        height: 100%;
+    }
+    &__increase  {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.total-text  {
+    font-size: 0.8rem;
+    color: $medium-brown;
+    line-height: 2;
+}
+.total-value  {
+    color: $dark-brown;
+    font-weight: $bold;
+    font-size: 2.4rem;
+}
+.increase-text {
+    font-size: 0.8rem;
+    color: $medium-brown;
+    line-height: 2;
+}
+.increase-value  {
+    color: $dark-brown;
+    font-weight: $bold;
+    font-size: 1rem;
+}
