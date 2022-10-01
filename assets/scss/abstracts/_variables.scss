@@ -1,0 +1,9 @@
+//--define breakpoints
+$breakpoints:  (
+    'small': (max-width: 480px),
+    'medium': (max-width: 768px),
+    'large': (max-width: 1200px),
+    'extra-large': (min-width: 1201px)
+);
+
+
