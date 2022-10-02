@@ -17,3 +17,28 @@
             + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
+@mixin progressBar {
+    position: relative;
+    background-color: $soft-red;
+    border-radius: 3px;  
+}
+
+@mixin dailyExpense {
+    color: $cream;
+    position: absolute;
+    top: -35px;
+    left: -12.5%;
+    background-color: $dark-brown;
+    width: 125%;
+    height: 0;
+    opacity: 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: $bold;
+    transition:height 0.25s ease-in;
+}
+
+@mixin dailyExpesneHover  {
+    height: 23px;
+    opacity: 1;
+}

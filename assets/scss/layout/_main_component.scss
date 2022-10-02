@@ -1,9 +1,7 @@
 .container  {
     width: 95%;
     max-width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %centerFlex;
     flex-direction: column;
     row-gap: 20px;
     font-family: 'DM Sans', sans-serif;
@@ -29,6 +27,8 @@
         font-size: 0.8rem;
         font-weight: 400;
 
+        
+
         &__income  {
             font-size: 1.5rem;
             font-weight: 800;
@@ -37,8 +37,8 @@
 
     &__logo  {
         background: url('/assets/images/logo.svg') center/contain no-repeat;
-        height: 61px;
-        width: 61px;
+        height: $sizelogo;
+        width: $sizelogo;
     }
 
 }
@@ -48,7 +48,10 @@
     width: 100%;
     padding: 25px 30px;
 
+    
+    
     &__title  {
+
         color: $dark-brown;
         text-align: left;
         font-size: 1.6rem;
@@ -58,22 +61,23 @@
     &__daily  {
         border-bottom: 1px solid 
         $cream ;
-        margin: 10px 0;
+        margin: 50px 0 10px 0;
         padding-bottom: 25px;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         width: 100%;
-        column-gap: 10px;
+        height: 175px;
     }
 }
 .vertical-wrapper  {
-
+    padding: 0 6px;
+    
     .bar  {
         height: 150px;   
         border-radius: 6px;   
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;   
+        justify-content: flex-end;  
     }
 }
 .day  {
@@ -83,41 +87,27 @@
     font-weight: $regular;
     text-align: center;
 }
-.progress-bar-monday  {
-    height: 70%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
-.progress-bar-tuesday  {
-    height: 20%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
-.progress-bar-wednesday  {
-    height: 10%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
-.progress-bar-thursday  {
+
+.progress {
     height: 50%;
-    background-color: $soft-red;
-    border-radius: 3px;   
+    @include progressBar;
+
+    &.blue {
+        background-color: $cyan;
+    }
+
+    &:hover  {
+        filter: brightness(1.3);
+        .daily-expense  {
+            @include dailyExpesneHover;           
+        }
+    }
+    .daily-expense {     
+        @include dailyExpense;
+        @extend %centerFlex;
+    }
 }
-.progress-bar-friday  {
-    height: 90%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
-.progress-bar-saturday  {
-    height: 22%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
-.progress-bar-sunday  {
-    height: 61%;
-    background-color: $soft-red;
-    border-radius: 3px;   
-}
+
 .resume  {
     display: flex;
     justify-content: space-between;
@@ -143,6 +133,7 @@
     color: $dark-brown;
     font-weight: $bold;
     font-size: 2.4rem;
+    margin-top: 25px;
 }
 .increase-text {
     font-size: 0.8rem;
@@ -153,4 +144,24 @@
     color: $dark-brown;
     font-weight: $bold;
     font-size: 1rem;
+}
+
+#spent_lastweek {
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
+    color: $dark-brown;
+    background-color: $cream;
+    border: 1px solid $very-pale-orange;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    padding-left: 15px;
+
+    &::placeholder {
+        font-size: 0.9rem;
+    }
+}
+.spent_lastweek  {
+    color: $medium-brown;
+    margin-top: 7px;
 }

@@ -8,6 +8,7 @@ $breakpoints:  (
 
 // Colors
 $soft-red : hsl(10, 79%, 65%);
+$soft-red-hover: hsl(10, 79%, 85%);
 $cyan : hsl(186, 34%, 60%);
 
 $dark-brown : hsl(25, 47%, 15%);
@@ -18,3 +19,7 @@ $very-pale-orange : hsl(33, 100%, 98%);
 // Fonts
 $regular : 400;
 $bold : 700;
+
+// container size
+$sizelogo : 61px ;
+
