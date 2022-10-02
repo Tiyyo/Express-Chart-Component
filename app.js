@@ -10,13 +10,8 @@ let DATA = [];
 let totalExpenseLastWeek = 230;
 let spentLastWeekInput = document.getElementById("spent_lastweek");
 let delta;
-let dayDate = new Date().getUTCDay();
 let options = { weekday: "short" };
-let currentDay = new Intl.DateTimeFormat("en-US", options)
-  .format(dayDate)
-  .toLowerCase();
-
-// console.log(trial);
+let currentDay = new Date().toLocaleString("en-US", options).toLowerCase();
 
 function displayChart() {
   barContainer.innerHTML = DATA.map((expense) => {
