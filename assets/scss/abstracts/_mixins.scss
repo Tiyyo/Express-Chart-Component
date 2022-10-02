@@ -35,7 +35,8 @@
     border-radius: 6px;
     text-align: center;
     font-weight: $bold;
-    transition:height 0.25s ease-in;
+    transition:all 0.35s ease-in-out;
+
 }
 
 @mixin dailyExpesneHover  {

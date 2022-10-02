@@ -12,7 +12,7 @@ let spentLastWeekInput = document.getElementById("spent_lastweek");
 let delta;
 let dayDate = new Date().getUTCDay();
 let options = { weekday: "short" };
-let currentDay = new Intl.DateTimeFormat("en-FR", options)
+let currentDay = new Intl.DateTimeFormat("en-US", options)
   .format(dayDate)
   .toLowerCase();
 
