@@ -96,7 +96,7 @@ body {
   font-weight: 800;
 }
 .balance__logo {
-  background: url("/assets/images/logo.svg") center/contain no-repeat;
+  background: url("../images/logo.svg") center/contain no-repeat;
   height: 61px;
   width: 61px;
 }
